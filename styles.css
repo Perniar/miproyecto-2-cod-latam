@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; 
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+    font-family: 'Domine', serif;
+
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*mobile*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 80px;
+    width: 100%;
+    background-color: #390f07;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 3px 10px 5px rgb(99, 50, 50);
+}
+
+.logo {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/*Menu de nav*/
+
+ 
+#menu-hamburguesa {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+
+}
+
+i#close-menu {
+    display: none;
+}
+
+nav{
+    display: none;
+}
+
+/* Estilo para el menu mobile */
+
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+body.mobile-menu-active i#close-menu {
+    display: block;
+}
+
+body.mobile-menu-active i#open-menu {
+    display: none;
+}
+
+body.mobile-menu-active header {
+    height: 40%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+body.mobile-menu-active nav {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+body.mobile-menu-active ul#menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#menu{
+   color: rgb(181, 135, 106);
+   display: flex;
+  /* Para quitar los puntos a los items de listas */
+   list-style: none;
+}
+
+li.menu-item a {
+    padding: 16px;
+    display: inline-block;
+}
+
+/* Estilos para la clase .active */
+li.menu-item:hover,
+li.menu-item a.active,
+a.Descarga:hover {
+    background-color: #917e7e;
+    transition: background-color  0.3s;
+    color: rgb(247, 251, 254);
+}
+
+/*modo oscuro */
+
+.light {
+    display: none;
+}
+
+#modo-oscuro {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(144, 143, 142);
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+}
+
+body.body-modo-oscuro  {
+    background-color: #212020;
+    color:  rgb(181, 135, 106);
+}
+
+body.body-modo-oscuro .light {
+    display: block;
+    color: burlywood;
+}
+
+
+body.body-modo-oscuro .moon {
+    display: none;
+}
+
+body.body-modo-oscuro footer {
+    background-color: #3b0f06;
+    color: rgb(181, 135, 106);
+}
+
+
+/*main*/
+
+main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    padding-top: 120px;
+}
+
+section#Inicio {
+    text-align: center;
+
+}
+
+.MIRIAN {
+    width: 300px;
+    border-radius: 50%;
+}
+
+article.Hola {
+    font-size: 20px;
+    text-align: center;
+    padding: 50px;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+  
+.Descarga {
+    color: rgb(78, 3, 3);
+    background-color: rgb(181, 135, 106);
+    padding: 8px;
+    border-radius: 50px;
+    
+}
+
+/*estilo para la clase descarga */
+
+p {
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+
+section#Contacto {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+article#Destrezas {
+    background:  rgb(181, 135, 106);
+    color: #3b0f06;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    max-width: 400px;
+    
+}
+
+section#Contacto {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    list-style: none;
+
+}
+
+.github {
+    padding: 50px;
+}
+
+footer {
+    background-color: rgb(181, 135, 106);
+    color: rgb(78, 3, 3);
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    h1 {
+      text-align: left;
+    }
+
+    section#Inicio {
+        flex-direction: row;
+    }
+
+    article.Hola {
+        width: 50%;
+        text-align: left;
+    }
+
+       #menu-hamburguesa {
+        display: none;
+       }
+
+       nav {
+        display: block;
+      }
+
+      #modo-oscuro{
+        right: 24%;
+      }
+
+}
